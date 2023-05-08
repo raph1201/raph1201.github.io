@@ -1,0 +1,310 @@
+body {
+    background: #191919;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+}
+
+
+
+/* GENERAL CLASSES */
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(/Users/raphaeljulien/Desktop/Coding/Website/font/Montserrat-Regular.otf);
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(/Users/raphaeljulien/Desktop/Coding/Website/font/Montserrat-Bold.otf);
+}
+
+.expandable {
+    width: 40%;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s;
+}
+  
+.expanded {
+    width: 120%;
+}
+
+.toggle {
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.toggle:hover {
+    color:black;
+    opacity: 50%;
+}
+
+.hidden {
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.show {
+    opacity: 1;
+    transition: 1s;
+    transition-delay: 0.2s;
+}
+
+.text {
+    font-family: Montserrat-Bold;
+    color: white;
+}
+
+.text-black {
+    font-family: Montserrat-Bold;
+    color: black;
+}
+
+.text-grey {
+    font-family: Montserrat-Bold;
+    color: #666666;
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.fill img {
+    flex-shrink: 0;
+    min-height: 100%
+}
+
+span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.cross-hidden {
+    position: absolute;
+    width: 20px;
+    top: 28px;
+    right: 30px;
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.cross-show {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+/* STRUCTURE CLASSES*/
+.main-site {
+    padding: 50px 10% 16px;
+}
+
+.center {
+    margin-bottom: 25px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 18px;
+    display: flex;
+}
+
+.row1 {
+    height: 445px;
+    border-radius: 18px;
+    gap: 25px
+}
+
+/* BOX 1 LEFT */
+.box1-left {
+    height: 100%;
+    background-color: black;
+    position: relative;
+    float: left;
+    overflow: hidden;
+}
+
+.box1-left-content {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.box1-left-img {
+    height: 100%;
+    width: 100%;
+    background-image: url(/Users/raphaeljulien/Desktop/Coding/Website/images/img1.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.box1-left-img-overlay {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.box1-left-img-overlay:hover {
+    opacity: 1;
+}
+
+.box1-left-img-overlay > * {
+    transform: translateY(-20px);
+    transition: transform 0.25s;
+}
+
+.box1-left-img-overlay:hover > * {
+    transform: translateY(0px);
+}
+
+.box1-left-img-overlay-hidden {
+    background: rgba(0, 0, 0, 0);
+}
+
+.about-me-text {
+    position:absolute;
+    background-color: yellow;
+    margin-bottom: 17px;
+    padding: 3px 12px;
+}
+
+.about-me-text-hidden {
+    opacity: 0;
+}
+
+.box1-left-nav {
+    height: 100%;
+    width: 0%;
+    transition: 0.4s;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.box1-left-nav-expanded {
+    width: 100%;
+}
+
+.name-text {
+    position:absolute;
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 12px;
+}
+
+.box1-left-nav-text {
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+    color: white;
+
+    width: 80%;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+/* BOX 1 RIGHT*/
+.box1-right
+{   
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* BOX 2 */
+.box2 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+    height: 75px;
+    background-color: black;
+}
+
+.box3 {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 650px;
+    gap: 25px;
+    border-radius: 18px;
+}
+
+.box3-child {
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    border-radius: 18px;
+}
+
+.box3-child-left {
+    max-height: 100%;
+    opacity: 30%;
+    position: relative;
+    overflow: hidden;
+}
+
+.box3-child-right {
+    max-height: 160%;
+    opacity: 30%;
+    position: relative;
+    overflow: hidden;
+}
+
+.box4 {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 75px;
+    gap: 25px;
+    border-radius: 18px;
+}
+
+.box4-child {
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    border-radius: 18px;
+}
+
+.box4-child-middle {
+    height: 100%;
+    line-height: 75px;
+    text-align: center;
+    width: 50%;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666666;
+    border-radius: 18px;
+}
+
+
+.footer {
+    font-family: Montserrat-Regular;
+    color: #666666;
+    margin-bottom: 15px;
+    position: static;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+

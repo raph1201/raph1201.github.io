@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+    </style>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+
+        <!-- JS -->
+        <script src="../script/script.js"></script>
+
+        <!-- TITLE -->
+        <title>Hello there</title>
+    </head> 
+
+    <body>
+        <div class="main-site"> 
+            <!-- DIV 1 : 5 children, extendible -->
+            <div class="center row1"> 
+                <div class="box1-left expandable" onclick="toggleExpand()">
+                    <img class="cross-hidden" loading="lazy" src="/Users/raphaeljulien/Desktop/Coding/Website/images/cross_icon.svg">
+                    <div class="box1-left-content fill">
+                        <div class="box1-left-img">
+                            <div class="box1-left-img-overlay">
+                                <div style="top: 83%;" class="about-me-text text-black">
+                                    ME
+                                </div>
+                            </div>
+                        </div>
+                        <p style="top: 10%; font-size: 25px;" class="name-text text-black hidden">RAPHAEL JULIEN</p>
+                        <nav class="box1-left-nav">
+                            <p class="box1-left-nav-text hidden">Born in France, grew up abroad. 3rd year Undergrad Student at McGill University,  Comp Sci. In love with learning & confident with what’s ahead.</p>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class=box1-right>
+                    <div class="slider-wrapper">
+                        <div class="slide">
+                            <img src="../images/slides/slide1.jpeg">
+                        </div>
+                        <div class="slide">
+                            <img src="../images/slides/slide2.jpeg">
+                        </div>
+                        <div class="slide">
+                            <img src="../images/slides/slide3.jpeg">
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <div class="slide-button" data-target="slide1">1</div>
+                        <div class="slide-button" data-target="slide2">2</div>
+                        <div class="slide-button" data-target="slide3">3</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- DIV 2 : socials -->
+            <div class="center box2"> 
+                <a href="https://github.com/raph1201" target="_blank">
+                    <img style="height: 25px;" src="/Users/raphaeljulien/Desktop/Coding/Website/images/logo-git.png"></img>
+                </a>
+
+                <a href="https://www.instagram.com/raph_mws/" target="_blank">
+                    <img style="height: 25px;" src="/Users/raphaeljulien/Desktop/Coding/Website/images/logo-ig.svg"></img>
+                </a>
+
+                <a href="https://www.linkedin.com/in/rapha%C3%ABl-julien-001046212/" target="_blank">
+                    <img style="height: 25px;" src="/Users/raphaeljulien/Desktop/Coding/Website/images/logo-in.png"></img>
+                </a>
+            </div>
+
+
+            <!-- DIV 3 : portfolio & about me -->
+            <div class="center box3"> 
+                <div class="box3-child fill"> 
+                    <img class="toggle box3-child-left" src="/Users/raphaeljulien/Desktop/Coding/Website/images/main-portfolio.jpg"></img>
+                    <div style="position: absolute; font-size:180%;" class="text">PORTFOLIO</div>
+                </div>
+
+                <div class="box3-child fill">
+                    <img class="toggle box3-child-right" src="/Users/raphaeljulien/Desktop/Coding/Website/images/main-aboutme.jpg"></img>
+                    <div style="position: absolute; font-size:180%;" class="text">ABOUT ME</div>     
+                </div>
+            </div>
+
+
+            <!-- DIV 4 : contact me -->
+            <div class="center box4"> 
+                <div class="box4-child"></div>
+                <div class="box4-child-middle text">CONTACT ME</div>
+                <div class="box4-child"></div>
+            </div>
+        </div>
+
+        <div class="footer"> 
+            <a>© 2023 by Raphaël Julien</a>
+        </div>
+    </body>
+
+</html>
