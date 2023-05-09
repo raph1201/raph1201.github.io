@@ -22,7 +22,7 @@
         <div class="main-site"> 
             <!-- DIV 1 : 5 children, extendible -->
             <div class="center row1"> 
-                <div class="box1-left expandable" onclick="toggleExpand()">
+                <div class="box1-left expandable" onclick="toggleExpand1()">
                     <img class="cross-hidden" loading="lazy" src="/Users/raphaeljulien/Desktop/Coding/Website/images/cross_icon.svg">
                     <div class="box1-left-content fill">
                         <div class="box1-left-img">
@@ -59,7 +59,7 @@
 
 
             <!-- DIV 2 : socials -->
-            <div class="center box2"> 
+            <div class="center row2"> 
                 <a href="https://github.com/raph1201" target="_blank">
                     <img style="height: 25px;" src="/Users/raphaeljulien/Desktop/Coding/Website/images/logo-git.png"></img>
                 </a>
@@ -75,15 +75,30 @@
 
 
             <!-- DIV 3 : portfolio & about me -->
-            <div class="center box3"> 
-                <div class="box3-child fill"> 
-                    <img class="toggle box3-child-left" src="/Users/raphaeljulien/Desktop/Coding/Website/images/main-portfolio.jpg"></img>
-                    <div style="position: absolute; font-size:180%;" class="text">PORTFOLIO</div>
+            <div class="center row3"> 
+                <div id="box3-child-left" class="box3-child expandable-3" onclick="toggleExpand3left()">
+                    <div class="box3-child-content fill">
+                        <div class="box3-child-img-left" loading="lazy">
+                            <div class="box3-child-overlay">
+                            </div>
+                        </div>
+                        <p class="box3-text">PORTFOLIO</p>
+                        <nav class="box3-nav">
+                            
+                        </nav>
+                    </div>
                 </div>
-
-                <div class="box3-child fill">
-                    <img class="toggle box3-child-right" src="/Users/raphaeljulien/Desktop/Coding/Website/images/main-aboutme.jpg"></img>
-                    <div style="position: absolute; font-size:180%;" class="text">ABOUT ME</div>     
+                <div id="box3-child-right" class="box3-child expandable-3" onclick="toggleExpand3right()">
+                    <div class="box3-child-content fill">
+                        <nav class="box3-nav">
+                            
+                        </nav>
+                        <div class="box3-child-img-right" loading="lazy">
+                            <div class="box3-child-overlay">
+                            </div>
+                        </div>
+                        <p class="box3-text">ABOUT ME</p>
+                    </div>
                 </div>
             </div>
 
