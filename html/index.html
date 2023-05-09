@@ -40,21 +40,19 @@
                 </div>
 
                 <div class=box1-right>
-                    <div class="slider-wrapper">
-                        <div class="slide">
-                            <img src="../images/slides/slide1.jpeg">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/slides/slide2.jpeg">
-                        </div>
-                        <div class="slide">
-                            <img src="../images/slides/slide3.jpeg">
-                        </div>
+                    <div class="slide active">
+                        <img src="../images/slides/slide1.jpeg">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/slides/slide2.jpeg">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/slides/slide3.jpeg">
                     </div>
                     <div class="slider-nav">
-                        <div class="slide-button" data-target="slide1">1</div>
-                        <div class="slide-button" data-target="slide2">2</div>
-                        <div class="slide-button" data-target="slide3">3</div>
+                        <div class="slide-button active"></div>
+                        <div class="slide-button"></div>
+                        <div class="slide-button"></div>
                     </div>
                 </div>
             </div>
@@ -97,10 +95,36 @@
                 <div class="box4-child"></div>
             </div>
         </div>
+        
+        <!-- Script for slider -->
+        <script type="text/javascript">
+            var slides = document.querySelectorAll(".slide");
+            var buttons = document.querySelectorAll(".slide-button");
+            let currentSlide = 1;
+
+            var manualNav = function(manual){
+                slides.forEach((slide) => {
+                    slide.classList.remove('active');
+
+                    buttons.forEach((button) => {
+                        button.classList.remove('active');
+                    })
+                })
+
+                slides[manual].classList.add('active');
+                buttons[manual].classList.add('active');
+            }
+
+            buttons.forEach((button, i) => {
+                button.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+                })
+            })
+        </script>
 
         <div class="footer"> 
             <a>© 2023 by Raphaël Julien</a>
         </div>
     </body>
-
 </html>

@@ -124,8 +124,8 @@ span {
     height: 100%;
     background-color: black;
     position: relative;
-    float: left;
     overflow: hidden;
+    border-radius: 18px;
 }
 
 .box1-left-content {
@@ -221,12 +221,61 @@ span {
 /* BOX 1 RIGHT*/
 .box1-right
 {   
+    height: 100%;
     width: 100%;
     background-color: black;
-    display: flex;
-    flex-flow: column nowrap;
-    border-radius: 18px;
+    position: relative;
+    float: left;
     overflow: hidden;
+    border-radius: 18px;
+}
+
+.slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+.slide.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: 0.8s;
+    transition-property: clip-path;
+}
+
+.slide img {
+    display: flex;
+    height: 100%;
+    max-width: 100%;
+    background-position: 50% 0;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.slider-nav {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slide-button {
+    background-color: white;
+    opacity: 0.5;
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slide-button.active {
+    opacity: 100%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
 }
 
 /* BOX 2 */
@@ -292,7 +341,7 @@ span {
 
     border-width: 1px;
     border-style: solid;
-    border-color: #666666;
+    border-color: black;
     border-radius: 18px;
 }
 
