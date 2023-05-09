@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+    </style>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+
+        <!-- JS -->
+        <script src="../script/script.js"></script>
+
+        <!-- TITLE -->
+        <title>Hello there</title>
+    </head> 
+
+    <body>
+        <div class="main-site"> 
+            <!-- DIV 1 : 5 children, extendible -->
+            <div class="center row1"> 
+                <div class="box1-left expandable" onclick="toggleExpand1()">
+                    <img class="cross-hidden" loading="lazy" src="../images/cross_icon.svg">
+                    <div class="box1-left-content fill">
+                        <div class="box1-left-img">
+                            <div class="box1-left-img-overlay">
+                                <div style="top: 83%;" class="about-me-text text-black">
+                                    ME
+                                </div>
+                            </div>
+                        </div>
+                        <p style="top: 10%; font-size: 25px;" class="name-text text-black hidden">RAPHAEL JULIEN</p>
+                        <nav class="box1-left-nav">
+                            <p class="nav-text hidden">Born in France, grew up abroad. 3rd year Undergrad Student at McGill University,  Comp Sci. In love with learning & confident with what’s ahead.</p>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class=box1-right>
+                    <div class="slide active">
+                        <img src="../images/slides/slide1.jpeg">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/slides/slide2.jpeg">
+                    </div>
+                    <div class="slide">
+                        <img src="../images/slides/slide3.jpeg">
+                    </div>
+                    <div class="slider-nav">
+                        <div class="slide-button active"></div>
+                        <div class="slide-button"></div>
+                        <div class="slide-button"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- DIV 2 : socials -->
+            <div class="center row2"> 
+                <a href="https://github.com/raph1201" target="_blank">
+                    <img style="height: 25px;" src="../images/logo-git.png"></img>
+                </a>
+
+                <a href="https://www.instagram.com/raph_mws/" target="_blank">
+                    <img style="height: 25px;" src="../images/logo-ig.svg"></img>
+                </a>
+
+                <a href="https://www.linkedin.com/in/rapha%C3%ABl-julien-001046212/" target="_blank">
+                    <img style="height: 25px;" src="../images/logo-in.png"></img>
+                </a>
+            </div>
+
+
+            <!-- DIV 3 : portfolio & about me -->
+            <div class="center row3"> 
+                <div id="box3-child-left" class="box3-child expandable-3" onclick="toggleExpand3left()">
+                    <img class="cross-hidden" loading="lazy" src="../images/cross_icon.svg">
+                    <div class="box3-child-content fill">
+                        <div class="box3-child-img-left" loading="lazy">
+                            <div class="box3-child-overlay">
+                            </div>
+                        </div>
+                        <p class="box3-text">PORTFOLIO</p>
+                        <nav class="box3-nav">
+                            <!-- First 2 Paragraphs -->
+                            <p style="position: relative;" class="nav-text hidden">With knowledge in several programming languages, frontend and backend, I have a specific interest in the Cloud infrastructure.</p>
+                            <p style="position: relative; padding-bottom: 280px;" class="nav-text hidden">Little experience, but a strong will and a firm desire to learn. Portfolio compiles open-source projects completed or contributed to.</p>
+                            
+                            <!-- More -->
+                            <a href="../html/portfolio.html" target="_blank">
+                                <div style="transition-delay: 0.6s;" class="more-info hidden">
+                                    <div class="nav-text">More</div>
+                                    <img style="width: 20px;" src="../images/arrow.svg">
+                                </div>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+                <div id="box3-child-right" class="box3-child expandable-3" onclick="toggleExpand3right()">
+                    <img class="cross-hidden-right" loading="lazy" src="../images/cross_icon.svg">
+                    <div class="box3-child-content fill">
+                        <nav class="box3-nav">
+                            <!-- First 2 Paragraphs -->
+                            <p style="position: relative;" class="nav-text hidden">Globe-trotteur with outstanding world experience. Lived across five different countries, three continents and nine time-zones.</p>
+                            <p style="position: relative; padding-bottom: 280px;" class="nav-text hidden">Polyglot, open-minded, I am in love with the vertiginous vastness of the world, and I wish to explore it as much as possible.</p>
+                            
+                            <!-- More -->
+                            <a href="../html/aboutme.html" target="_blank">
+                                <div style="transition-delay: 0.6s;" class="more-info hidden">
+                                    <div class="nav-text">More</div>
+                                    <img style="width: 20px;" src="../images/arrow.svg">
+                                </div>
+                            </a>
+                        </nav>
+                        <div class="box3-child-img-right" loading="lazy">
+                            <div class="box3-child-overlay">
+                            </div>
+                        </div>
+                        <p class="box3-text">ABOUT ME</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- DIV 4 : contact me -->
+            <div class="center box4"> 
+                <div class="box4-child"></div>
+                <div class="box4-child-middle text">CONTACT ME</div>
+                <div class="box4-child"></div>
+            </div>
+        </div>
+        
+        <!-- Script for slider -->
+        <script type="text/javascript">
+            var slides = document.querySelectorAll(".slide");
+            var buttons = document.querySelectorAll(".slide-button");
+            let currentSlide = 1;
+
+            var manualNav = function(manual){
+                slides.forEach((slide) => {
+                    slide.classList.remove('active');
+
+                    buttons.forEach((button) => {
+                        button.classList.remove('active');
+                    })
+                })
+
+                slides[manual].classList.add('active');
+                buttons[manual].classList.add('active');
+            }
+
+            buttons.forEach((button, i) => {
+                button.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+                })
+            })
+        </script>
+
+        <div class="footer"> 
+            <a>© 2023 by Raphaël Julien</a>
+        </div>
+    </body>
+</html>
