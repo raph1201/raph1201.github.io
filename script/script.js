@@ -15,9 +15,8 @@ function toggleExpand1() {
   div6.classList.toggle('cross-show');
 
   var div7 = document.querySelectorAll('.hidden');
-  for (var i=0; i<div7.length; i++) {
-    div7[i].classList.toggle('show');
-  }
+  div7[0].classList.toggle('show');
+  div7[1].classList.toggle('show');
 }
 
 function toggleExpand3left() {
@@ -38,6 +37,16 @@ function toggleExpand3left() {
   //Text
   var texts = document.querySelectorAll('.box3-text');
   texts[0].classList.toggle('box3-text-expanded');
+
+  //Show text
+  var hiddens = document.querySelectorAll('.hidden');
+  hiddens[2].classList.toggle('show');
+  hiddens[3].classList.toggle('show');
+  hiddens[4].classList.toggle('show');
+
+  //Show cross
+  var cross = document.querySelectorAll('.cross-hidden');
+  cross[1].classList.toggle('cross-show');
 }
 
 function toggleExpand3right() {
@@ -58,4 +67,14 @@ function toggleExpand3right() {
   //Text
   var texts = document.querySelectorAll('.box3-text');
   texts[1].classList.toggle('box3-text-expanded');
+
+  //Show text
+  var hiddens = document.querySelectorAll('.hidden');
+  hiddens[5].classList.toggle('show');
+  hiddens[6].classList.toggle('show');
+  hiddens[7].classList.toggle('show');
+
+  //Show Cross
+  var div6 = document.querySelector('.cross-hidden-right');
+  div6.classList.toggle('cross-show');
 }

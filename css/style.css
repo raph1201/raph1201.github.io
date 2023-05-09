@@ -88,6 +88,20 @@ span {
     transition: 0.5s;
 }
 
+.cross-hidden-right {
+    position: absolute;
+    width: 20px;
+    top: 28px;
+    left: 30px;
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.cross-show {
+    opacity: 1;
+    transition: 0.5s;
+}
+
 .expandable-3 {
     width: 50%;
     transition: 0.2s;
@@ -95,6 +109,14 @@ span {
 
 .expanded-3 {
     width: 104%;
+}
+
+.more-info {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+    margin-right: 20%;
+    gap: 10px;
 }
 
 /* STRUCTURE CLASSES*/
@@ -201,7 +223,7 @@ span {
     padding: 3px 12px;
 }
 
-.box1-left-nav-text {
+.nav-text {
     font-family: Montserrat-Regular;
     font-size: 16px;
     color: white;
@@ -243,6 +265,7 @@ span {
     background-position: 50% 0;
     background-size: cover;
     overflow: hidden;
+    opacity: 0.8;
 }
 
 .slider-nav {
@@ -296,6 +319,7 @@ span {
     background-color: black;
     border-radius: 18px;
     overflow: hidden;
+    position: relative;
 }
 
 .box3-child-content {
@@ -364,6 +388,7 @@ span {
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-direction: column;
 }
 
 .box3-nav-expanded {
