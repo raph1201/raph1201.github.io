@@ -78,3 +78,9 @@ function toggleExpand3right() {
   var div6 = document.querySelector('.cross-hidden-right');
   div6.classList.toggle('cross-show');
 }
+
+//Force window up when refresh
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
