@@ -472,6 +472,12 @@ a:link {
     border-style: solid;
     border-color: black;
     border-radius: 18px;
+
+    transition: 0.2s;
+}
+
+.box4-child-middle:hover {
+    background-color: black;
 }
 
 
