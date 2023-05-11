@@ -1,20 +1,4 @@
-body {
-    background: #191919;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-    margin: 0;
-}
-
-/* GENERAL CLASSES */
-@font-face {
-    font-family: Montserrat-Regular;
-    src: url(../font/Montserrat-Regular.otf);
-}
-
-@font-face {
-    font-family: Montserrat-Bold;
-    src: url(../font/Montserrat-Bold.otf);
-}
+@import "parent.css";
 
 .expandable {
     width: 40%;
@@ -113,19 +97,13 @@ span {
 .more-info {
     display: flex;
     flex-direction: row;
-    margin-left: 20%;
-    margin-right: 20%;
+    justify-content: center;
     gap: 15px;
 }
 
-a:link {
-    text-decoration: none;
-}
-
-
 /* LOADER */
 .loader-container {
-    z-index: 3;
+    z-index: 5;
     position: fixed;
     background-color: #191919;
     width: 100%;
@@ -282,18 +260,20 @@ a:link {
 /* BOX 1 RIGHT*/
 .box1-right
 {   
+    z-index: 1;
     height: 100%;
     width: 100%;
-    background-color: black;
     position: relative;
-    float: left;
     overflow: hidden;
+    background-color: black;
     border-radius: 18px;
+    box-shadow: inset  0 -0px 30px -30px rgba(0, 0, 0, 1);
 }
 
 .slide {
     z-index: 1;
     position: absolute;
+    height: 100%;
     width: 100%;
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
@@ -305,11 +285,10 @@ a:link {
 }
 
 .slide img {
-    display: flex;
+    object-fit: cover;
     height: 100%;
-    max-width: 100%;
+    width: 100%;
     background-position: 50% 0;
-    background-size: cover;
     overflow: hidden;
     opacity: 0.8;
 }
@@ -410,6 +389,8 @@ a:link {
 }
 
 .box3-text {
+    z-index: 3;
+    
     font-family: Montserrat-Bold;
     color: white;
     font-size: 30px;
@@ -462,8 +443,6 @@ a:link {
 
 .box4-child-middle {
     height: 100%;
-    line-height: 75px;
-    text-align: center;
     width: 50%;
 
     border-width: 1px;
@@ -471,11 +450,12 @@ a:link {
     border-color: black;
     border-radius: 18px;
 
+    background-color: black;
     transition: 0.2s;
 }
 
 .box4-child-middle:hover {
-    background-color: black;
+    background-color:#191919;
 }
 
 

@@ -1,0 +1,22 @@
+body {
+    background: #191919;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    margin: 0;
+}
+
+
+/* GENERAL CLASSES */
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../font/Montserrat-Regular.otf);
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../font/Montserrat-Bold.otf);
+}
+
+a:link {
+    text-decoration: none;
+}
