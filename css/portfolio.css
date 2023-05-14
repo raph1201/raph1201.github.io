@@ -1,9 +1,5 @@
 @import "parent.css";
 
-.hidden {
-    opacity: 0;
-}
-
 /* STRUCTURE CLASSES*/
 .main-site {
     padding: 25px 10% 0px;
@@ -22,6 +18,57 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+
+.expandable {
+    height: 500px;
+}
+
+.expanded {
+    height: 1500px;
+}
+
+.collapsable-width {
+    width: 100%;
+    transition: 0.2s;
+}
+
+.collapsable-height {
+    height: 500px;
+    transition: 0.3s;
+}
+
+.collapsed-width {
+    width: 0%;
+}
+
+.collapsed-height {
+    height: 120px;
+}
+
+.gap {
+    column-gap: 25px;
+    transition: 0.2s;
+}
+
+.no-gap {
+    column-gap: 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden2 {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+.y {
+    color: yellow;
 }
 
 /* ROW 1 */
@@ -60,30 +107,28 @@
 /* ROW 2 */
 .row2 {
     z-index: 1;
-    display: flex;
-    flex-flow: row nowrap;
-    height: 500px;
-    gap: 25px;
     border-radius: 18px;
+    display: flex;
+    flex-flow: row;
+    height: max-content;
+    width: 100%;
 }
 
 .box2-child {
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    border-radius: 18px;
-    overflow: hidden;
-    position: relative;
+    z-index: 2;
+    height: max-content;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 15px;
 }
 
 .box2-child-content {
-    display: flex;
-    height: 100%;
-    width: 100%;
+    border-radius: 18px;
+    position: relative;
 }
 
 .box2-child-img-left {
-    position: relative;
+    position:relative;
     overflow: hidden;
     background-image: url(../images/courses.jpg);
     height: 100%;
@@ -95,7 +140,7 @@
 .box2-child-img-right {
     position: relative;
     overflow: hidden;
-    background-image: url(../images/project.png);
+    background-image: url(../images/projects.png);
     height: 100%;
     width: 100%;
     background-position: 50% 0;
@@ -113,6 +158,10 @@
 
 .box2-child-overlay:hover {
     opacity: 0.4;
+}
+
+.box2-child-overlay-hidden:hover {
+    opacity: 0.7;
 }
 
 .box2-text {
@@ -135,6 +184,62 @@
     color: black;
     background-color: yellow;
 }
+
+.box2-course {
+    z-index: 2;
+    background-color: black;
+    border-radius: 18px;
+
+    height: 200px;
+    width: 100%;
+}
+
+.box2-project {
+    z-index: 2;
+    background-color: black;
+    border-radius: 18px;
+
+    width: 100%;
+}
+
+.paragraph {
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.paragraph-title {
+    font-family: Montserrat-Bold;
+    color: white;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.paragraph-content {
+    font-family: Montserrat-Regular;
+    color: white;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.course-img-container {
+    position:relative;
+    overflow: hidden;
+    height: 100%;
+    width: 120%;
+    background-size: cover;
+}
+
+
+/* FOOTER */
 
 .footer {
     font-family: Montserrat-Regular;

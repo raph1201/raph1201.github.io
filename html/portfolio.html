@@ -12,7 +12,7 @@
         <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
 
         <!-- JS -->
-        <script></script>
+        <script src="../script/portfolio.js"></script>
 
         <!-- TITLE -->
         <title>Portfolio</title>
@@ -22,7 +22,7 @@
         <div class="main-site">
             <!-- ROW 1 -->
             <div class="center row1">
-                <a href="../index.html" target="_blank">
+                <a href="../index.html">
                     <div class="back">
                         <p class="text">Back</p>
                         <img class="arrow" style="width: 20px;" src="../images/arrow.svg">
@@ -31,23 +31,189 @@
             </div>
 
             <!-- ROW 2 -->
-            <div class="center row2"> 
-                <div id="box2-child-left" class="box2-child">
-                    <div class="box2-child-content fill">
+            <div class="center row2 gap"> 
+                <!-- COURSES -->
+                <div class="box2-child collapsable-width">
+                    <!-- SECTION BOX -->
+                    <div id="box2-child-left" class="box2-child-content fill collapsable-height" onclick="toggleExpandLeft()">
                         <div class="box2-child-img-left" loading="lazy">
                             <div class="box2-child-overlay">
                             </div>
                         </div>
                         <p class="box2-text">COURSES</p>
                     </div>
+                    
+                    <!-- COURSE BOX 1 -->
+                    <div class="box2-course fill hidden"> 
+                        <div class="paragraph">
+                            <p class="paragraph-title">
+                                SOFTWARE DESIGN
+                            </p>
+                            <p class="paragraph-content">
+                                Programming course in <span class="y">Java</span>. Extensive introduction to state-of-the-art software engineering, with emphasis on <span class="y">Encapsulation, Classes and Interfaces, UML Diagrams, Test suites</span> and <span class="y">branch coverage</span>.
+                            </p>
+                        </div>
+                        <div class="course-img-container" style="background-image: url(../images/uml.png);" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- COURSE BOX 2 -->
+                    <div class="box2-course fill hidden"> 
+                        <div class="paragraph">
+                            <p class="paragraph-title">
+                                LANG & PARADIGMS
+                            </p>
+                            <p class="paragraph-content">
+                                Programming course in <span class="y">OCamL</span>. In-depth look into the benefits and strength of functionnal programming. Implementation of <span class="y">variable checking, substitution, expression evaluation & unification</span>.
+                            </p>
+                        </div>
+                        <div class="course-img-container" style="background-position: center; background-image: url(../images/ocaml.jpg);" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- COURSE BOX 3 -->
+                    <div class="box2-course fill hidden"> 
+                        <div class="paragraph">
+                            <p class="paragraph-title">
+                                STATS & PROBABILITIES
+                            </p>
+                            <p class="paragraph-content">
+                                Discrete and Continuous random variable analysis. Parameter Estimator using Method of Moments and Maximum Likelihood. Bias, Consistency, Error estimation and comparison of estimators. Hypothesis testing.
+                            </p>
+                        </div>
+                        <div class="course-img-container" style="background-position: center; background-image: url(../images/estimator.png);" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- COURSE BOX 4 -->
+                    <div class="box2-course fill hidden"> 
+                        <div class="paragraph">
+                            <p class="paragraph-title">
+                                OPERATING SYSTEMS
+                            </p>
+                            <p class="paragraph-content">
+                                Full courses about OS infrastructure, features and role in a computer. Processes & Threads synchronisation, parallelization, and communication . Virtual & Real time Scheduling algorithms. Memory management and File system.
+                            </p>
+                        </div>
+                        <div class="course-img-container" style="background-image: url(../images/filesystem.jpg);" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- COURSE BOX 5 -->
+                    <div class="box2-course fill hidden"> 
+                        <div class="paragraph">
+                            <p class="paragraph-title">
+                                DISCRETE MATHEMATICS
+                            </p>
+                            <p class="paragraph-content">
+                                Problem-solving course diving deep in the applications and beauty of discrete mathematical problems, and relation to real-life problems. Included Counting Theory, Graph Theory, Pigeonhole Principle, Combinatorics, Recurrences, Genereting Fucntions and Discrete Probabilities.  
+                            </p>
+                        </div>
+                        <div class="course-img-container" style="background-position: center; background-image: url(../images/pigeonhole.png);" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- COURSE BOX 6 -->
+                    <div class="box2-course fill hidden"> 
+                        <div class="paragraph">
+                            <p class="paragraph-title">
+                                NON-LINEAR DYNAMICS
+                            </p>
+                            <p class="paragraph-content">
+                                Study of non-linear dynamical systems, including their existence, uniqueness, fixed points and bifurcations. Use of vector fields and phase portraits representations. Linearization using Jacobian matrices. Study of collective dynamics and Chaos.
+                            </p>
+                        </div>
+                        <div class="course-img-container" style="background-image: url(../images/lorenz.jpg);" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- COURSE BOX 7 -->
+                    <div class="box2-course fill hidden"> 
+                        <div class="paragraph">
+                            <p class="paragraph-title">
+                                ARTIFICIAL INTELLIGENCE
+                            </p>
+                            <p class="paragraph-content">
+                                Introduction to the intricacies of modern AI. Focus on search methods, problem-solving, adapting to uncertainties, and application to Game Theory. Study of Reinforcement Learning methods, such as Minimax and Monte Carlo Tree Search. Policy design. 
+                            </p>
+                        </div>
+                        <div class="course-img-container" style="background-image: url(../images/mcts.png);" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- COURSE BOX 8 -->
+                    <div class="box2-course fill hidden"> 
+                        <div class="paragraph">
+                            <p class="paragraph-title">
+                                CLOUD COMPUTING
+                            </p>
+                            <p class="paragraph-content">
+                                Large overview of the Cloud computing industry, from its architecture to its economy. Study of Cloud Service models, Networking, Virtualization, Scheduling, Load Balancing, Ressource Management, Data Streaming and Security. Comparison of past cloud computing projects and models. 
+                            </p>
+                        </div>
+                        <div class="course-img-container" style="background-position: center; background-image: url(../images/docker.png);" loading="lazy">
+                        </div>
+                    </div>
                 </div>
-                <div id="box2-child-right" class="box2-child">
-                    <div class="box2-child-content fill">
+                
+                <!-- PROJECTS -->
+                <div class="box2-child collapsable-width">
+                    <!-- SECTION BOX -->
+                    <div id="box2-child-right" class="box2-child-content fill collapsable-height" onclick="toggleExpandRight()">
                         <div class="box2-child-img-right" loading="lazy">
                             <div class="box2-child-overlay">
                             </div>
                         </div>
                         <p class="box2-text">PROJECTS</p>
+                    </div>
+
+                    <!-- PROJECT BOX 1 -->
+                    <div style="height: 400px;" class="box2-project fill hidden2"> 
+                        <div class="paragraph">
+                            <p class="paragraph-title">
+                                PERSONAL WEBSITE
+                            </p>
+                            <p class="paragraph-content">
+                                A bit rough on the edges, but I'm quite satisfied with my design. It was inspired by the <a href="https://www.sidemen.com/" target="_blank" style="color: white;"><u>Sidemen website</u></a>, by <a href="https://www.acidtestdesign.com/" target="_blank" style="color: white;"><u>Acidtest Design</u></a>. 
+                            </p>
+                            <p class="paragraph-content">
+                                This project compiles <span class="y">HTML</span>, <span class="y">CSS</span> and <span class="y">JS</span> work, which were all completely self-taught and without ChatGPT (which came in very underwhelming).
+                            </p>
+                            <p class="paragraph-content">
+                                My website will serve as an extension to my resume, a <span class="y">catalog</span> of my work and projects I want to show off. While this portfolio remains humble, I hope to thicken it progressively over my future years.
+                            </p>
+                            <p class="paragraph-content">
+                                This project is open source, and all the code can be found <a href="https://github.com/raph1201/raph1201.github.io" target="_blank" style="color: yellow;"><u>here</u></a>.
+                            </p>
+                        </div>
+                        <div class="course-img-container" style="background-image: url(../images/website.png);" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- PROJECT BOX 2 -->
+                    <div style="height: 520px;" class="box2-project fill hidden2"> 
+                        <div class="paragraph">
+                            <p class="paragraph-title">
+                                SIMPLE ELASTIC CLOUD
+                            </p>
+                            <p class="paragraph-content">
+                                A 2 months-long project made in collaboration with 2 amazing teamates. This is by far the biggest project I have had in my academic career. 
+                            </p>
+                            <p class="paragraph-content">
+                                This project consisted in replicating a <span class="y">Cloud System</span> using <span class="y">Virtual Machines</span> as to simulate a client, a ressource manager and a proxy manager for different type of works; and <span class="y">Docker containers</span> for jobs.  
+                            </p>
+                            <p class="paragraph-content">
+                                Our design succeeded in implementing a <span class="y">partitioned inter-dependent model, Load Balancing, Elasticity and ressource-aware infrastructure</span>. The project was done in Python and used several frameworks such as Flask, Json and Pycurl to help us simulate the cloud system.
+                            </p>
+                            <p class="paragraph-content">
+                                The cloud is accompanied with a <span class="y">real-time website</span> accessible localy, showing the current state of the cloud: its nodes and jobs.
+                            </p>
+                            <p class="paragraph-content">
+                               This project is open source and accessible <a href="https://github.com/raph1201/Cloud-Project" target="_blank" style="color: yellow;"><u>here</u></a>, although it will be hard to replicate as it involves setting up several VMs and modifying some IPs to match those of your machines'.
+                            </p>
+                        </div>
+                        <div class="course-img-container" style="background-position: center; background-image: url(../images/elastic-cloud.png);" loading="lazy">
+                        </div>
                     </div>
                 </div>
             </div>
