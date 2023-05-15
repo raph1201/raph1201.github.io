@@ -130,7 +130,7 @@
 .box2-child-img-left {
     position:relative;
     overflow: hidden;
-    background-image: url(../images/courses.jpg);
+    background-image: url(../images/portofolio/courses.jpg);
     height: 100%;
     width: 100%;
     background-position: 50% 0;
@@ -140,7 +140,7 @@
 .box2-child-img-right {
     position: relative;
     overflow: hidden;
-    background-image: url(../images/projects.png);
+    background-image: url(../images/portofolio/projects.png);
     height: 100%;
     width: 100%;
     background-position: 50% 0;

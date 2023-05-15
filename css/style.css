@@ -181,7 +181,7 @@ span {
 .box1-left-img {
     height: 100%;
     width: 100%;
-    background-image: url(../images/img1.jpg);
+    background-image: url(../images/index/img1.jpg);
     background-position: 50% 0;
     background-size: cover;
     position: relative;
@@ -358,7 +358,7 @@ span {
 .box3-child-img-left {
     position: relative;
     overflow: hidden;
-    background-image: url(../images/main-portfolio.jpg);
+    background-image: url(../images/index/main-portfolio.jpg);
     height: 100%;
     width: 100%;
     background-position: 50% 0;
@@ -368,7 +368,7 @@ span {
 .box3-child-img-right {
     position: relative;
     overflow: hidden;
-    background-image: url(../images/main-aboutme.jpg);
+    background-image: url(../images/index/main-aboutme.jpg);
     height: 100%;
     width: 100%;
     background-position: 50% 0;
