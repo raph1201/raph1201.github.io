@@ -59,11 +59,15 @@
     display: none;
 }
 
+.show {
+    display: flex;
+}
+
 .hidden2 {
     display: none;
 }
 
-.show {
+.show2 {
     display: flex;
 }
 
@@ -238,6 +242,27 @@
     background-size: cover;
 }
 
+.tags li {
+    float: left; 
+}
+  
+.tag {
+    font-family: Montserrat-Bold;
+    background: #eee;
+    border-radius: 3px;
+    color: black;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px 0 10px;
+    position: relative;
+    margin: 0;
+    transition: 0.1s;
+}
+
+.tag:hover {
+    background: gray;
+}
+  
 
 /* FOOTER */
 

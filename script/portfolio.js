@@ -52,6 +52,6 @@ function toggleExpandRight() {
     // SHOW 
     var courses = document.querySelectorAll('.hidden2');
     courses.forEach(element => {
-        element.classList.toggle('show');
+        element.classList.toggle('show2');
     });
 }
