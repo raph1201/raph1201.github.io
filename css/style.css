@@ -458,17 +458,6 @@ span {
     background-color:#191919;
 }
 
-
-.footer {
-    font-family: Montserrat-Regular;
-    color: #666666;
-    margin-bottom: 15px;
-    position: static;
-    padding-top: 80px;
-    padding-bottom: 80px;
-    text-align: center;
-}
-
 /* ANIMATIONS */
 .fade-in {
     animation: MoveIn 3s;
